@@ -1,0 +1,103 @@
+body {
+    background-color: #f4f4f4;
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+}
+
+.btn-primary:hover {
+    background-color: #e64449;
+    border-color: #e64449;
+}
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -500px 0;
+    }
+    100% {
+        background-position: 500px 0;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: yellow;
+    }
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+/* Apply the animations to the hiddenMessage1 image */
+#hiddenMessage1 {
+    animation: bounceIn 2s ease-out forwards, shimmer 3s infinite linear, colorChange 4s infinite; /* 2s is the duration of the bounce animation, 3s is the duration of the shimmer animation, and 4s is the duration of the color-changing animation */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    background-size: 200% 100%;
+    max-width: 300px;
+    border: 3px solid red; /* Initial border color */
+}
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Define the keyframes for the color-change animation */
+@keyframes colorChange {
+    0% {
+        color: #ff0000; /* Start color */
+    }
+    100% {
+        color: #0000ff; /* End color */
+    }
+}
+
+/* Apply the animations to the hiddenMessage text */
+#hiddenMessage {
+    animation: fadeIn 2s ease-out forwards, colorChange 4s infinite; /* 2s is the duration of the fadeIn animation, 4s is the duration of the colorChange animation */
+    font-family: 'Arial', sans-serif; /* Setting font type */
+    font-weight: bold; /* Setting font weight */
+    font-size: 18px; /* Setting font size */
+    color: #ff0000; /* Initial font color */
+}
